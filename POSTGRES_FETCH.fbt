@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FBType Name="POSTGRES_FETCH" Comment="">
+	<InterfaceList>
+		<EventInputs>
+			<Event Name="INIT" Type="Event" Comment="">
+				<With Var="HOST"/>
+				<With Var="PORT"/>
+				<With Var="USER"/>
+				<With Var="PASSWORD"/>
+				<With Var="DBNAME"/>
+				<With Var="TABLE_NAME"/>
+			</Event>
+			<Event Name="RUN" Type="Event" Comment="">
+			</Event>
+		</EventInputs>
+		<EventOutputs>
+			<Event Name="INIT_O" Type="Event" Comment="">
+			</Event>
+			<Event Name="RUN_O" Type="Event" Comment="">
+				<With Var="JSON_TIMESERIES"/>
+			</Event>
+		</EventOutputs>
+		<InputVars>
+			<VarDeclaration Name="HOST" Type="STRING" Comment=""/>
+			<VarDeclaration Name="PORT" Type="UINT" Comment=""/>
+			<VarDeclaration Name="USER" Type="STRING" Comment=""/>
+			<VarDeclaration Name="PASSWORD" Type="STRING" Comment=""/>
+			<VarDeclaration Name="DBNAME" Type="STRING" Comment=""/>
+			<VarDeclaration Name="TABLE_NAME" Type="STRING" Comment=""/>
+		</InputVars>
+		<OutputVars>
+			<VarDeclaration Name="JSON_TIMESERIES" Type="STRING" Comment=""/>
+		</OutputVars>
+	</InterfaceList>
+</FBType>
