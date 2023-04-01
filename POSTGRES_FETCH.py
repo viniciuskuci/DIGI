@@ -37,11 +37,11 @@ class POSTGRES_FETCH:
                 try:
                     self.cursor.execute(query1)
                     start_times = self.cursor.fetchall()
-                    size_1 = len(start_times)
+                    #size_1 = len(start_times)
 
                     self.cursor.execute(query2)
                     end_times = self.cursor.fetchall()
-                    size_2 = len(end_times)
+                    #size_2 = len(end_times)
 
                     ziped = list(zip(start_times, end_times))
                     table = pd.DataFrame(ziped, columns=['Start', 'End'])
