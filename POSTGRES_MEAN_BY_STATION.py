@@ -38,15 +38,13 @@ class POSTGRES_MEAN_BY_STATION:
                 try:
                     self.cursor.execute(query, (id,))
                     data = self.cursor.fetchone()
-                    MEAN = data[0].total_seconds()
-                    print(MEAN)
-                    return [None, event_value, MEAN]
+                    output = float(data[0].total_seconds())
+                    print(output)
+                    return [None, event_value, output]
                 except Exception as err:
                     print(err)
-                finally:
-                    #self.cursor.close()
-                    #self.conn.close()
                     return [None, event_value, None]
+                
             else:
                 print("No active connection to PostgreSQL DB.")
                 return [None, event_value, None]

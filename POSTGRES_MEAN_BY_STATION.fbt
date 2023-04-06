@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE FBType SYSTEM "http://www.holobloc.com/xml/LibraryElement.dtd">
-<FBType Name="POSTGRES_MEAN_BY_STATION" OpcUa="POINT.ENDPOINT">
+<FBType Name="POSTGRES_MEAN_BY_STATION" OpcUa="SERVICE">
     <InterfaceList>
         <EventInputs>
             <Event Name="INIT" Type="Event">
@@ -12,7 +12,7 @@
                 
             </Event>
             <Event Name="RUN" Type="Event">
-            <With Var="ID"/>
+                <With Var="ID"/>
             </Event>
         </EventInputs>
         <EventOutputs>
@@ -30,7 +30,7 @@
             <VarDeclaration Name="ID" Type="INT" OpcUa="Constant"/>
         </InputVars>
         <OutputVars>
-			<VarDeclaration Name="MEAN" Type="REAL" OpcUa="Variable.RUN"/>
+			<VarDeclaration Name="MEAN" Type="REAL" OpcUa="Variable"/>
 		</OutputVars>
     </InterfaceList>
 </FBType>
